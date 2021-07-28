@@ -24,8 +24,12 @@ const app = new Vue({
         slideLeft() {
             this.activeNumber = (this.activeNumber === 0) ? this.images.length - 1 : this.activeNumber - 1;
         },
+        // cambia il numero attivo con quello dell'indice corrente dell'array
         changeImage(index) {
             this.activeNumber = index;
         },
+    },
+    created: function changeImageInterval() {
+        setInterval(this.slideRight, 3000);
     },
 });
