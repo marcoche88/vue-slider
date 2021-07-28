@@ -1,3 +1,11 @@
+.col-2, .col-8 {
+    height: 600px;
+}
+
+.images {
+    position: relative;
+}
+
 img {
     display: none;
 }
@@ -8,4 +16,25 @@ img {
 
 .cursor-click {
     cursor: pointer;
+}
+
+.dots-slider {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+}
+
+.dot {
+    border-radius: 50%;
+    height: 15px;
+    width: 15px;
+    background-color: white;
+    margin: 10px;
+}
+
+.dot.active {
+    background-color: blue;
 }

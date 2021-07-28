@@ -19,15 +19,24 @@
     <div id="root">
         <div class="container">
             <div class="row my-5">
+                <!-- slider sinistra -->
                 <div class="col-2 d-flex justify-content-end align-items-center">
                     <i v-on:click="slideLeft" class="fas fa-angle-left fa-3x cursor-click"></i>
                 </div>
+                <!-- immagini slider -->
                 <div class="col-8 d-flex justify-content-center align-items-center">
                     <div class="images">
                         <img v-for="(image, index) in images" v-bind:src="image" class="img-fluid"
                             v-bind:class="isActive(index)" v-bind:alt="`immagine ${index + 1}`">
+                        <!-- dot slider -->
+                        <div class="dots-slider d-flex">
+                            <div v-for="(dot, index) in images" class="dot cursor-click" v-bind:class="isActive(index)"
+                                v-on:click="changeImage(index)">
+                            </div>
+                        </div>
                     </div>
                 </div>
+                <!-- slider destra -->
                 <div class="col-2 d-flex align-items-center">
                     <i v-on:click="slideRight" class="fas fa-angle-right fa-3x cursor-click"></i>
                 </div>
