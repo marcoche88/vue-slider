@@ -13,7 +13,13 @@ const app = new Vue({
     },
     methods: {
         isActive(index) {
-            return (index === this.activeNumber) ? 'active' : ''
+            return (index === this.activeNumber) ? 'active' : '';
+        },
+        slideRight() {
+            this.activeNumber = (this.activeNumber === this.images.length - 1) ? 0 : this.activeNumber + 1;
+        },
+        slideLeft() {
+            this.activeNumber = (this.activeNumber === 0) ? this.images.length - 1 : this.activeNumber - 1;
         },
     },
 });

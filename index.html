@@ -20,16 +20,16 @@
         <div class="container">
             <div class="row my-5">
                 <div class="col-2 d-flex justify-content-end align-items-center">
-                    <i class="fas fa-angle-left fa-3x"></i>
+                    <i v-on:click="slideLeft" class="fas fa-angle-left fa-3x cursor-click"></i>
                 </div>
-                <div class="col-8">
+                <div class="col-8 d-flex justify-content-center align-items-center">
                     <div class="images">
                         <img v-for="(image, index) in images" v-bind:src="image" class="img-fluid"
                             v-bind:class="isActive(index)" v-bind:alt="`immagine ${index + 1}`">
                     </div>
                 </div>
                 <div class="col-2 d-flex align-items-center">
-                    <i class="fas fa-angle-right fa-3x"></i>
+                    <i v-on:click="slideRight" class="fas fa-angle-right fa-3x cursor-click"></i>
                 </div>
             </div>
         </div>

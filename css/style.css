@@ -5,3 +5,7 @@ img {
 .active {
     display: inline-block;
 }
+
+.cursor-click {
+    cursor: pointer;
+}
